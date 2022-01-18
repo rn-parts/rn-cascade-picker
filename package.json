@@ -1,0 +1,26 @@
+{
+  "name": "rn-cascade-picker",
+  "version": "1.0.0",
+  "description": "A cascade picker component written in pure JavaScript for React Native",
+  "main": "src/cascadePicker/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yorickshan/rn-cascade-picker.git"
+  },
+  "keywords": [
+    "picker"
+  ],
+  "author": "yorickshan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yorickshan/rn-cascade-picker/issues"
+  },
+  "homepage": "https://github.com/yorickshan/rn-cascade-picker#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-native": "^0.66.4"
+  }
+}
