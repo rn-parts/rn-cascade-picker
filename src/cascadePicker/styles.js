@@ -15,14 +15,6 @@ const PICKER_ITEM_HEIGHT = 30,
 export const pickerItemHeight = PICKER_ITEM_HEIGHT;
 
 /**
- * 相邻元素样式
- */
-export const siblingStyles = StyleSheet.create({
-  horizontal: {flex: 1, height: '100%'},
-  vertical: {flex: 1, width: '100%'},
-});
-
-/**
  * 主样式
  */
 export const mainStyles = StyleSheet.create({
@@ -45,6 +37,14 @@ export const mainStyles = StyleSheet.create({
 });
 
 /**
+ * 相邻元素样式
+ */
+ export const siblingStyles = StyleSheet.create({
+  horizontal: {flex: 1, height: '100%'},
+  vertical: {flex: 1, width: '100%'},
+});
+
+/**
  * 工具条样式
  */
 export const toolbarStyles = StyleSheet.create({
@@ -53,6 +53,13 @@ export const toolbarStyles = StyleSheet.create({
     height: 50,
     paddingHorizontal: 15,
     flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  title: {
+    fontSize: 18,
+    color: '#666',
+    textAlign: 'center',
   },
   button: {
     height: '100%',

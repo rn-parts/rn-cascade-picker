@@ -15,8 +15,8 @@ export default class CascadePicker extends Component {
     this.pickerParams = [];
 
     // 初始化state
-    this.state = {pickedValues: props.pickedValues};
-    for (let i = 0; i < props.pickedValues.length; i++) {
+    this.state = {pickedValues: props.value};
+    for (let i = 0; i < props.value.length; i++) {
       this.state[`top${i}`] = new Animated.Value(0);
     }
   }
@@ -64,7 +64,7 @@ export default class CascadePicker extends Component {
         }
 
         pickedValues[pIndex] = pickedItem.value;
-        items = pickedItem.items || [];
+        items = pickedItem.children || [];
 
         pIndex++;
       }
@@ -108,7 +108,7 @@ export default class CascadePicker extends Component {
         values: data.map((d) => d.value),
       };
 
-      data = (data.filter((d) => d.value == pickedValue)[0] || {}).items;
+      data = (data.filter((d) => d.value == pickedValue)[0] || {}).children;
       if (!data || data.length == 0) {
         break;
       }

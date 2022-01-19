@@ -1,6 +1,6 @@
-import React, {PureComponent} from 'react';
-import {View, TouchableOpacity, Text} from 'react-native';
-import {toolbarStyles, siblingStyles} from './styles';
+import React, { PureComponent } from "react";
+import { View, TouchableOpacity, Text } from "react-native";
+import { toolbarStyles } from "./styles";
 
 /**
  * 工具条
@@ -12,18 +12,22 @@ export default class ToolBar extends PureComponent {
         <TouchableOpacity
           style={toolbarStyles.button}
           activeOpacity={0.9}
-          onPress={this.props.onCancel}>
+          onPress={this.props.onCancel}
+        >
           <Text style={toolbarStyles.button_text}>
-            {this.props.cancelText || '取消'}
+            {this.props.cancelText || "取消"}
           </Text>
         </TouchableOpacity>
-        <View style={siblingStyles.horizontal} />
+        <View>
+          <Text style={toolbarStyles.title}>{this.props.title || ""}</Text>
+        </View>
         <TouchableOpacity
           style={toolbarStyles.button}
           activeOpacity={0.9}
-          onPress={this.props.onConfirm}>
+          onPress={this.props.onConfirm}
+        >
           <Text style={toolbarStyles.button_text}>
-            {this.props.confirmText || '确认'}
+            {this.props.confirmText || "确认"}
           </Text>
         </TouchableOpacity>
       </View>
