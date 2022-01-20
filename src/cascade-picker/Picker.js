@@ -31,7 +31,7 @@ export default class Picker extends PureComponent {
     return (
       <Animated.View style={[pickerStyles.container, { top }]}>
         {items.map((item, index) => (
-          <PickerItem key={index} text={item.text} height={itemHeight} />
+          <PickerItem key={index} text={item.label} height={itemHeight} />
         ))}
       </Animated.View>
     );

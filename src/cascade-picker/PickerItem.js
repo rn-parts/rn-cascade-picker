@@ -9,7 +9,7 @@ export default class PickerItem extends PureComponent {
   render() {
     return (
       <View style={[pickerItemStyles.container, { height: this.props.height }]}>
-        <Text style={pickerItemStyles.text}>{this.props.text || ""}</Text>
+        <Text style={pickerItemStyles.label}>{this.props.label || ""}</Text>
       </View>
     );
   }

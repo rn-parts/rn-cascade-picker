@@ -126,7 +126,7 @@ export const pickerItemStyles = StyleSheet.create({
     alignItems: "center",
     borderWidth: 0,
   },
-  text: {
+  label: {
     fontSize: 18,
     color: "#333",
   },
