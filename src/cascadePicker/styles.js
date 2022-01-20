@@ -66,7 +66,11 @@ export const toolbarStyles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  button_text: {
+  cancelText: {
+    color: '#c73e3a',
+    fontSize: 18,
+  },
+  confirmText: {
     color: '#c73e3a',
     fontSize: 18,
   },
