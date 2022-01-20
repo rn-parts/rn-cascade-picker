@@ -1,6 +1,6 @@
-import React, {PureComponent} from 'react';
-import {View, Text} from 'react-native';
-import {pickerItemStyles} from './styles';
+import React, { PureComponent } from "react";
+import { View, Text } from "react-native";
+import { pickerItemStyles } from "./styles";
 
 /**
  * 选择器的某一子项
@@ -8,8 +8,8 @@ import {pickerItemStyles} from './styles';
 export default class PickerItem extends PureComponent {
   render() {
     return (
-      <View style={[pickerItemStyles.container, {height: this.props.height}]}>
-        <Text style={pickerItemStyles.text}>{this.props.text || ''}</Text>
+      <View style={[pickerItemStyles.container, { height: this.props.height }]}>
+        <Text style={pickerItemStyles.text}>{this.props.text || ""}</Text>
       </View>
     );
   }

@@ -1,8 +1,8 @@
-import React, {PureComponent} from 'react';
-import {View, PanResponder, Dimensions} from 'react-native';
-import {overlayStyles, siblingStyles} from './styles';
+import React, { PureComponent } from "react";
+import { View, PanResponder, Dimensions } from "react-native";
+import { overlayStyles, siblingStyles } from "./styles";
 
-const SCRREN_WIDTH = Dimensions.get('window').width;
+const SCRREN_WIDTH = Dimensions.get("window").width;
 
 /**
  * 遮罩
@@ -26,8 +26,8 @@ export default class Overlay extends PureComponent {
   /**
    * 响应开始时
    */
-  onPanResponderBegin = (evt, {x0, dy}) => {
-    let {pickerCount, onSlide} = this.props,
+  onPanResponderBegin = (evt, { x0, dy }) => {
+    let { pickerCount, onSlide } = this.props,
       offsetIndex = Math.floor(x0 / (SCRREN_WIDTH / pickerCount));
     offsetIndex == pickerCount && offsetIndex--;
     this.pickerIndex = offsetIndex;
@@ -37,15 +37,15 @@ export default class Overlay extends PureComponent {
   /**
    * 响应结束时
    */
-  onPanResponderEnd = (evt, {dy}) => {
-    let {itemHeight, onSlideEnd} = this.props,
+  onPanResponderEnd = (evt, { dy }) => {
+    let { itemHeight, onSlideEnd } = this.props,
       offsetIndex = Math.round(dy / itemHeight);
     onSlideEnd && onSlideEnd(this.pickerIndex, offsetIndex);
   };
 
   render() {
-    let {itemHeight} = this.props,
-      itemStyle = [overlayStyles.item, {height: itemHeight}];
+    let { itemHeight } = this.props,
+      itemStyle = [overlayStyles.item, { height: itemHeight }];
     return (
       <View style={overlayStyles.container} {...this._panResponder.panHandlers}>
         <View style={[siblingStyles.vertical, overlayStyles.beyond]} />

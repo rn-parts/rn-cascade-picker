@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
-import {View, TouchableOpacity, Animated} from 'react-native';
-import ToolBar from './ToolBar';
-import Overlay from './Overlay';
-import Picker from './Picker';
-import {mainStyles, siblingStyles, pickerItemHeight} from './styles';
+import React, { Component } from "react";
+import { View, TouchableOpacity, Animated } from "react-native";
+import ToolBar from "./ToolBar";
+import Overlay from "./Overlay";
+import Picker from "./Picker";
+import { mainStyles, siblingStyles, pickerItemHeight } from "./styles";
 
 /**
  * 级联选择器
@@ -15,7 +15,7 @@ export default class CascadePicker extends Component {
     this.pickerParams = [];
 
     // 初始化state
-    this.state = {pickedValues: props.value};
+    this.state = { pickedValues: props.value };
     for (let i = 0; i < props.value.length; i++) {
       this.state[`top${i}`] = new Animated.Value(0);
     }
@@ -25,7 +25,7 @@ export default class CascadePicker extends Component {
    * 滑动时回调
    */
   onSlide = (pickerIndex, offsetY) => {
-    Animated.event([null, {offsetY: this.getTop(pickerIndex)}])(null, {
+    Animated.event([null, { offsetY: this.getTop(pickerIndex) }])(null, {
       offsetY,
     });
   };
@@ -34,8 +34,8 @@ export default class CascadePicker extends Component {
    * 滑动结束时回调
    */
   onSlideEnd = (pickerIndex, offsetIndex) => {
-    let {pickedValues} = this.state,
-      {pickedIndex, values} = this.pickerParams[pickerIndex],
+    let { pickedValues } = this.state,
+      { pickedIndex, values } = this.pickerParams[pickerIndex],
       oldPickedIndex = pickedIndex,
       maxPickerIndex = this.pickerParams.length - 1;
 
@@ -56,7 +56,7 @@ export default class CascadePicker extends Component {
 
       while (pIndex <= maxPickerIndex) {
         let pickedItem = items.filter(
-          (t) => t.value == pickedValues[pIndex],
+          (t) => t.value == pickedValues[pIndex]
         )[0];
 
         if (pIndex > pickerIndex && !pickedItem) {
@@ -70,10 +70,11 @@ export default class CascadePicker extends Component {
       }
     }
 
-    this.setState({pickedValues});
+    this.setState({ pickedValues });
     Animated.timing(this.getTop(pickerIndex), {
       toValue: 0,
       duration: 10,
+      useNativeDriver: true
     }).start();
   };
 
@@ -83,8 +84,8 @@ export default class CascadePicker extends Component {
   getTop = (index) => this.state[`top${index}`];
 
   render() {
-    let {data, itemHeight = pickerItemHeight} = this.props,
-      {pickedValues} = this.state,
+    let { data, itemHeight = pickerItemHeight } = this.props,
+      { pickedValues } = this.state,
       pickers = [],
       overlay = null;
 
@@ -99,8 +100,8 @@ export default class CascadePicker extends Component {
           key={index}
           items={data.concat()}
           top={this.getTop(index)}
-          {...{pickedIndex, itemHeight}}
-        />,
+          {...{ pickedIndex, itemHeight }}
+        />
       );
 
       this.pickerParams[index] = {
