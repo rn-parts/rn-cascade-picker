@@ -2,7 +2,7 @@
   "name": "rn-cascade-picker",
   "version": "1.0.4",
   "description": "A cascade picker component written in pure JavaScript for React Native",
-  "main": "src/cascadePicker/index.js",
+  "main": "src/cascade-picker/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "pub": "sh ./publish.sh"

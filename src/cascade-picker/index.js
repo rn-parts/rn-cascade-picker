@@ -74,7 +74,7 @@ export default class CascadePicker extends Component {
     Animated.timing(this.getTop(pickerIndex), {
       toValue: 0,
       duration: 10,
-      useNativeDriver: true
+      useNativeDriver: false,
     }).start();
   };
 
