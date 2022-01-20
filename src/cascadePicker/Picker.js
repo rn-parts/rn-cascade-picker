@@ -29,7 +29,7 @@ export default class Picker extends PureComponent {
     }
 
     return (
-      <Animated.View style={[pickerStyles.container, {top}]}>
+      <Animated.View style={[pickerStyles.container, {top}]} useNativeDriver={true}>
         {items.map((item, index) => (
           <PickerItem key={index} text={item.text} height={itemHeight} />
         ))}
