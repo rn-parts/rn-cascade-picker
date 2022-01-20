@@ -16,22 +16,22 @@ export default class Picker extends PureComponent {
      * 2）使选中项居中显示
      */
     while (pickedIndex < Math.ceil((items.length - 1) / 2)) {
-      items.unshift({ text: "" });
+      items.unshift({ label: "" });
       pickedIndex++;
     }
     while (pickedIndex > Math.floor((items.length - 1) / 2)) {
-      items.push({ text: "" });
+      items.push({ label: "" });
     }
     while (items.length < 5) {
-      items.unshift({ text: "" });
-      items.push({ text: "" });
+      items.unshift({ label: "" });
+      items.push({ label: "" });
       pickedIndex++;
     }
 
     return (
       <Animated.View style={[pickerStyles.container, { top }]}>
         {items.map((item, index) => (
-          <PickerItem key={index} text={item.label} height={itemHeight} />
+          <PickerItem key={index} label={item.label} height={itemHeight} />
         ))}
       </Animated.View>
     );
