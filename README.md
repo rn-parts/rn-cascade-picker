@@ -52,6 +52,7 @@ export default function App() {
   }
 }
 ```
+<img alt="demo gif" src="https://user-images.githubusercontent.com/11376339/150460426-5b1c2e76-d7f7-48e1-ad22-f3a0cd3e0a8e.gif" width="30%" height="30%">
 
 ### Contributing
 If you want to add some features, feel free to submit PR.
