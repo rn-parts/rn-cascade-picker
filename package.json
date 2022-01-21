@@ -1,6 +1,6 @@
 {
   "name": "rn-cascade-picker",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "A cascade picker component written in pure JavaScript for React Native",
   "main": "src/cascade-picker/index.js",
   "scripts": {
