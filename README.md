@@ -43,13 +43,15 @@ export default function App() {
   render() {
       return (
         <CascadePicker
-          data={data}
+          data={[]}
           value={[]}
           onCancel={() => {}}
-          onConfirm={(value) => {
-          }}
+          onConfirm={(val) => {}}
         />
     )
   }
 }
 ```
+
+### Contributing
+If you want to add some features, feel free to submit PR.
