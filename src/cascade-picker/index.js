@@ -25,7 +25,9 @@ export default class CascadePicker extends Component {
    * 滑动时回调
    */
   onSlide = (pickerIndex, offsetY) => {
-    Animated.event([null, { offsetY: this.getTop(pickerIndex) }])(null, {
+    Animated.event([null, { offsetY: this.getTop(pickerIndex) }], {
+      useNativeDriver: false,
+    })(null, {
       offsetY,
     });
   };
