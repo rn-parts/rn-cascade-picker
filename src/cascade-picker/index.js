@@ -137,9 +137,13 @@ export default class CascadePicker extends Component {
         />
         <View style={mainStyles.popbox}>
           <ToolBar
+            title={this.props.title}
+            titleTextStyle={this.props.titleTextStyle}
             cancelText={this.props.cancelText}
+            cancelTextStyle={this.props.cancelTextStyle}
             onCancel={this.props.onCancel}
             confirmText={this.props.confirmText}
+            confirmTextStyle={this.props.confirmTextStyle}
             onConfirm={() =>
               this.props.onConfirm &&
               this.props.onConfirm(this.state.pickedValues)
