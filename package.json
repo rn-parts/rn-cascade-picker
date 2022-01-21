@@ -5,6 +5,7 @@
   "main": "src/cascade-picker/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "standard-version --skip.changelog --skip.tag --release-as",
     "pub": "sh ./publish.sh"
   },
   "repository": {
@@ -25,5 +26,8 @@
   "peerDependencies": {
     "react": ">= 16.13.1",
     "react-native": ">= 0.63.4"
+  },
+  "devDependencies": {
+    "standard-version": "^9.3.2"
   }
 }
