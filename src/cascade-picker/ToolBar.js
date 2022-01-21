@@ -10,7 +10,7 @@ export default class ToolBar extends PureComponent {
     return (
       <View style={toolbarStyles.container}>
         <TouchableOpacity
-          style={toolbarStyles.button}
+          style={toolbarStyles.widget}
           activeOpacity={0.9}
           onPress={this.props.onCancel}
         >
@@ -18,13 +18,13 @@ export default class ToolBar extends PureComponent {
             {this.props.cancelText || "取消"}
           </Text>
         </TouchableOpacity>
-        <View>
+        <View style={toolbarStyles.widget}>
           <Text style={[toolbarStyles.title, this.props.titleTextStyle]}>
             {this.props.title || ""}
           </Text>
         </View>
         <TouchableOpacity
-          style={toolbarStyles.button}
+          style={toolbarStyles.widget}
           activeOpacity={0.9}
           onPress={this.props.onConfirm}
         >

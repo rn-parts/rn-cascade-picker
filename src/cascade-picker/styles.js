@@ -49,11 +49,15 @@ export const siblingStyles = StyleSheet.create({
  */
 export const toolbarStyles = StyleSheet.create({
   container: {
-    width: "100%",
-    height: 50,
-    paddingHorizontal: 15,
+    height: 44,
     flexDirection: "row",
-    justifyContent: "space-between",
+    borderBottomColor: "#e7e7e7",
+    borderBottomWidth: 1,
+  },
+  widget: {
+    flex: 1,
+    height: "100%",
+    justifyContent: "center",
     alignItems: "center",
   },
   title: {
@@ -61,18 +65,15 @@ export const toolbarStyles = StyleSheet.create({
     color: "#666",
     textAlign: "center",
   },
-  button: {
-    height: "100%",
-    justifyContent: "center",
-    alignItems: "center",
-  },
   cancelText: {
     color: "#c73e3a",
     fontSize: 18,
+    textAlign: "center",
   },
   confirmText: {
     color: "#c73e3a",
     fontSize: 18,
+    textAlign: "center",
   },
 });
 
