@@ -14,11 +14,24 @@ export default class CascadePicker extends Component {
 
     this.pickerParams = [];
 
-    // 初始化state
-    this.state = { pickedValues: props.value };
+    this.state = {
+      pickedValues: props.value,
+      visible: props.visible,
+    };
     for (let i = 0; i < props.value.length; i++) {
       this.state[`top${i}`] = new Animated.Value(0);
     }
+  }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    const { visible, value } = nextProps;
+    if (visible !== prevState.visible) {
+      return {
+        visible,
+        pickedValues: value,
+      };
+    }
+    return null;
   }
 
   /**
@@ -87,7 +100,7 @@ export default class CascadePicker extends Component {
 
   render() {
     let { data, itemHeight = pickerItemHeight } = this.props,
-      { pickedValues } = this.state,
+      { pickedValues, visible } = this.state,
       pickers = [],
       overlay = null;
 
@@ -130,31 +143,35 @@ export default class CascadePicker extends Component {
     }
 
     return (
-      <View style={mainStyles.container}>
-        <TouchableOpacity
-          style={siblingStyles.vertical}
-          onPress={this.props.onCancel}
-        />
-        <View style={mainStyles.popbox}>
-          <ToolBar
-            title={this.props.title}
-            titleTextStyle={this.props.titleTextStyle}
-            cancelText={this.props.cancelText}
-            cancelTextStyle={this.props.cancelTextStyle}
-            onCancel={this.props.onCancel}
-            confirmText={this.props.confirmText}
-            confirmTextStyle={this.props.confirmTextStyle}
-            onConfirm={() =>
-              this.props.onConfirm &&
-              this.props.onConfirm(this.state.pickedValues)
-            }
-          />
-          <View style={mainStyles.box}>
-            {pickers}
-            {overlay}
+      <>
+        {visible && (
+          <View style={mainStyles.container}>
+            <TouchableOpacity
+              style={siblingStyles.vertical}
+              onPress={this.props.onCancel}
+            />
+            <View style={mainStyles.popbox}>
+              <ToolBar
+                title={this.props.title}
+                titleTextStyle={this.props.titleTextStyle}
+                cancelText={this.props.cancelText}
+                cancelTextStyle={this.props.cancelTextStyle}
+                onCancel={this.props.onCancel}
+                confirmText={this.props.confirmText}
+                confirmTextStyle={this.props.confirmTextStyle}
+                onConfirm={() =>
+                  this.props.onConfirm &&
+                  this.props.onConfirm(this.state.pickedValues)
+                }
+              />
+              <View style={mainStyles.box}>
+                {pickers}
+                {overlay}
+              </View>
+            </View>
           </View>
-        </View>
-      </View>
+        )}
+      </>
     );
   }
 }

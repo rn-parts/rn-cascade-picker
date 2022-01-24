@@ -22,6 +22,7 @@ yarn add rn-cascade-picker
 
 | Prop             | Type                                     | Default | Description                                                                                          |
 | ---------------- | ---------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------- |
+| visible          | Boolean                                  | false   | Determine whether picker is visible or not                                                           |
 | data             | `Array<{value, label, children: Array}>` | -       | data source                                                                                          |
 | value            | Array                                    | -       | the value, the format is [value1, value2, value3], corresponds to the level value of the data source |
 | title            | String                                   | -       | title                                                                                                |
@@ -52,7 +53,9 @@ export default function App() {
   }
 }
 ```
+
 <img alt="demo gif" src="https://user-images.githubusercontent.com/11376339/150460426-5b1c2e76-d7f7-48e1-ad22-f3a0cd3e0a8e.gif" width="30%" height="30%">
 
 ### Contributing
+
 If you want to add some features, feel free to submit PR.
