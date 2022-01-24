@@ -51,7 +51,7 @@ export default class CascadePicker extends Component {
     // 设置选中项
     pickedValues[pickerIndex] = values[pickedIndex];
 
-    // 若选中项的索引发生变化，则检查其子项选中项是否存在，若不存在，则重置为最后一项
+    // 若选中项的索引发生变化，则检查其子项选中项是否存在，若不存在，则重置为第一项
     if (pickedIndex != oldPickedIndex && pickerIndex < maxPickerIndex) {
       let pIndex = 0,
         items = this.props.data;
@@ -62,7 +62,7 @@ export default class CascadePicker extends Component {
         )[0];
 
         if (pIndex > pickerIndex && !pickedItem) {
-          pickedItem = items[items.length - 1];
+          pickedItem = items[0];
         }
 
         pickedValues[pIndex] = pickedItem.value;
