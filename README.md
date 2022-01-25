@@ -22,9 +22,10 @@ yarn add rn-cascade-picker
 
 | Prop             | Type                                     | Default | Description                                                                                          |
 | ---------------- | ---------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------- |
-| visible          | Boolean                                  | false   | Determine whether picker is visible or not                                                           |
+| visible          | Boolean                                  | false   | determine whether Picker is visible or not                                                           |
 | data             | `Array<{value, label, children: Array}>` | -       | data source                                                                                          |
 | value            | Array                                    | -       | the value, the format is [value1, value2, value3], corresponds to the level value of the data source |
+| cols             | Number                                   | `3`     | col numbers                                                                                          |
 | title            | String                                   | -       | title                                                                                                |
 | cancelText       | String                                   | `取消`  | cancel text                                                                                          |
 | confirmText      | String                                   | `确定`  | confirm text                                                                                         |

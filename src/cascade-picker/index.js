@@ -11,14 +11,15 @@ import { mainStyles, siblingStyles, pickerItemHeight } from "./styles";
 export default class CascadePicker extends Component {
   constructor(props) {
     super(props);
+    const { value, visible = false, cols = 3 } = props;
 
     this.pickerParams = [];
-
     this.state = {
-      pickedValues: props.value,
-      visible: props.visible,
+      pickedValues: value,
+      visible,
     };
-    for (let i = 0; i < props.value.length; i++) {
+
+    for (let i = 0; i < cols; i++) {
       this.state[`top${i}`] = new Animated.Value(0);
     }
   }
