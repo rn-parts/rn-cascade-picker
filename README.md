@@ -3,7 +3,9 @@
 A cascade picker component written in pure JavaScript for React Native
 
 [![Latest Version on NPM](https://img.shields.io/npm/v/rn-cascade-picker.svg?style=flat-square)](https://npmjs.com/package/rn-cascade-picker)
-[![npm](https://img.shields.io/npm/dt/rn-cascade-picker.svg?style=flat-square)](https://www.npmjs.com/package/rn-cascade-picker)
+[![npm](https://img.shields.io/npm/dm/rn-cascade-picker.svg?style=flat-square)](https://www.npmjs.com/package/rn-cascade-picker)
+[![github issues](https://img.shields.io/github/issues/yorickshan/rn-cascade-picker.svg?style=flat-square)](https://github.com/meliorence/react-native-snap-carousel/issues)
+[![github closed issues](https://img.shields.io/github/issues-closed/yorickshan/rn-cascade-picker.svg?style=flat-square&colorB=44cc11)](https://github.com/meliorence/react-native-snap-carousel/issues?q=is%3Aissue+is%3Aclosed)
 
 ### Install
 
@@ -37,25 +39,16 @@ yarn add rn-cascade-picker
 
 ### Usage
 
-```js
-// example
-import CascadePicker from 'rn-cascade-picker';
-
-export default function App() {
-  render() {
-      return (
-        <CascadePicker
-          data={[]}
-          value={[]}
-          onCancel={() => {}}
-          onConfirm={(val) => {}}
-        />
-    )
-  }
-}
+```sh
+# demo
+cd example
+yarn
+yarn ios
 ```
 
-<img alt="demo gif" src="https://user-images.githubusercontent.com/11376339/151099982-24d8fac8-2aed-4c56-8bb6-65c37e2f5a57.gif" width="30%" height="30%">
+<img alt="demo png" src="https://user-images.githubusercontent.com/11376339/151309157-c2283dd2-f518-4c28-8949-cd818b460714.png" width="23%">
+
+<img alt="demo gif" src="https://user-images.githubusercontent.com/11376339/151099982-24d8fac8-2aed-4c56-8bb6-65c37e2f5a57.gif" width="23%">
 
 ### Contributing
 

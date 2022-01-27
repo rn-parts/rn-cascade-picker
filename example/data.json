@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "value": "1",
+      "label": "Australia",
+      "children": [
+        {
+          "value": "2",
+          "label": "New South Wales",
+          "children": [
+            {"value": "3", "label": "Sydney"},
+            {"value": "4", "label": "Wollongong"}
+          ]
+        },
+        {
+          "value": "5",
+          "label": "Victoria",
+          "children": [
+            {"value": "6", "label": "Melbourne"},
+            {"value": "7", "label": "Geelong"}
+          ]
+        }
+      ]
+    },
+    {
+      "value": "10",
+      "label": "Canada",
+      "children": [
+        {
+          "value": "11",
+          "label": "Alberta",
+          "children": [
+            {"value": "12", "label": "Calgary"},
+            {"value": "13", "label": "Brooks"}
+          ]
+        },
+        {
+          "value": "14",
+          "label": "British Columbia",
+          "children": [
+            {"value": "15", "label": "Vancouver"},
+            {"value": "16", "label": "Vernon"}
+          ]
+        }
+      ]
+    },
+    {
+      "value": "20",
+      "label": "United States",
+      "children": [
+        {
+          "value": "21",
+          "label": "New York",
+          "children": [
+            {"value": "22", "label": "Albany"},
+            {"value": "23", "label": "Norwich"}
+          ]
+        },
+        {
+          "value": "24",
+          "label": "Pennsylvania",
+          "children": [
+            {"value": "25", "label": "Farrell"},
+            {"value": "26", "label": "Parker"}
+          ]
+        }
+      ]
+    }
+  ]
+}
