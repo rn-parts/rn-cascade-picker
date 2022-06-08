@@ -15,7 +15,7 @@ export default class CascadePicker extends Component {
 
     this.pickerParams = [];
     this.state = {
-      pickedValues: value,
+      pickedValues: value || [],
       visible,
     };
 
@@ -25,11 +25,21 @@ export default class CascadePicker extends Component {
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    const { visible, value } = nextProps;
-    if (visible !== prevState.visible) {
+    const { visible, value, cols = 3, data = [] } = nextProps;
+    if (visible !== prevState.visible && data.length > 0) {
+      let pickedValues = value || [];
+
+      if(pickedValues.length === 0){
+        let currentItem = data[0];
+        while(currentItem && pickedValues.length < cols){
+          pickedValues.push(currentItem.value);
+          currentItem = currentItem.children ? currentItem.children[0] : null;
+        }
+      }
+
       return {
         visible,
-        pickedValues: value,
+        pickedValues,
       };
     }
     return null;
