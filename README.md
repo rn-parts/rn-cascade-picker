@@ -7,7 +7,7 @@ A cascade picker component written in pure JavaScript for React Native
 [![github issues](https://img.shields.io/github/issues/yorickshan/rn-cascade-picker.svg?style=flat-square)](https://github.com/meliorence/react-native-snap-carousel/issues)
 [![github closed issues](https://img.shields.io/github/issues-closed/yorickshan/rn-cascade-picker.svg?style=flat-square&colorB=44cc11)](https://github.com/meliorence/react-native-snap-carousel/issues?q=is%3Aissue+is%3Aclosed)
 
-### Install
+## Installation
 
 ```sh
 yarn add rn-cascade-picker
@@ -19,6 +19,19 @@ yarn add rn-cascade-picker
 "react": ">= 16.13.1",
 "react-native": ">= 0.63.4"
 ```
+
+## Usage
+
+```sh
+# demo
+cd example
+yarn
+yarn ios
+```
+
+<img alt="demo png" src="https://user-images.githubusercontent.com/11376339/151309157-c2283dd2-f518-4c28-8949-cd818b460714.png" width="23%">
+
+<img alt="demo gif" src="https://user-images.githubusercontent.com/11376339/151099982-24d8fac8-2aed-4c56-8bb6-65c37e2f5a57.gif" width="23%">
 
 ### Props
 
@@ -37,19 +50,12 @@ yarn add rn-cascade-picker
 | onCancel         | (): void                                 | -       | cancel handler                                                                                       |
 | onConfirm        | (val): void                              | -       | confirm handler                                                                                      |
 
-### Usage
-
-```sh
-# demo
-cd example
-yarn
-yarn ios
-```
-
-<img alt="demo png" src="https://user-images.githubusercontent.com/11376339/151309157-c2283dd2-f518-4c28-8949-cd818b460714.png" width="23%">
-
-<img alt="demo gif" src="https://user-images.githubusercontent.com/11376339/151099982-24d8fac8-2aed-4c56-8bb6-65c37e2f5a57.gif" width="23%">
-
-### Contributing
+## Contribution
 
 If you want to add some features, feel free to submit PR.
+
+## License
+
+[MIT](LICENSE).
+
+
