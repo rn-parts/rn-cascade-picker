@@ -15,7 +15,7 @@ export default class ToolBar extends PureComponent {
           onPress={this.props.onCancel}
         >
           <Text style={[toolbarStyles.cancelText, this.props.cancelTextStyle]}>
-            {this.props.cancelText || "取消"}
+            {this.props.cancelText || "cancel"}
           </Text>
         </TouchableOpacity>
         <View style={toolbarStyles.widget}>
@@ -31,7 +31,7 @@ export default class ToolBar extends PureComponent {
           <Text
             style={[toolbarStyles.confirmText, this.props.confirmTextStyle]}
           >
-            {this.props.confirmText || "确认"}
+            {this.props.confirmText || "confirm"}
           </Text>
         </TouchableOpacity>
       </View>

@@ -42,8 +42,8 @@ yarn ios
 | value            | Array                                    | -       | the value, the format is [value1, value2, value3], corresponds to the level value of the data source |
 | cols             | Number                                   | `3`     | col numbers                                                                                          |
 | title            | String                                   | -       | title                                                                                                |
-| cancelText       | String                                   | `取消`  | cancel text                                                                                          |
-| confirmText      | String                                   | `确定`  | confirm text                                                                                         |
+| cancelText       | String                                   | `cancel`  | cancel text                                                                                          |
+| confirmText      | String                                   | `confirm`  | confirm text                                                                                         |
 | titleTextStyle   | Object                                   | -       | style of title text                                                                                  |
 | cancelTextStyle  | Object                                   | -       | style of cancel text                                                                                 |
 | confirmTextStyle | Object                                   | -       | style of confirm text                                                                                |
